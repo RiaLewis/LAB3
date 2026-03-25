@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "info-2602-fastapi-lab-3"
+version = "0.0.1"
+description = "Lab 3 for info 2602"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Kwasi Edwards", email = "kwasiedwards@gmail.com" }
+]
+dependencies = [
+    "fastapi[standard]",
+    "httpx",
+    "pwdlib",
+    "pytest-asyncio",
+    "pytest",
+    "ruff",
+    "sqlmodel",
+    "typer",
+    "uvicorn[standard]",
+]
+[project.optional-dependencies]
+dev = [
+
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.setuptools]
+packages = ["app"]
